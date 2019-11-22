@@ -1,3 +1,4 @@
+$ pwd
 $ git init
 $ echo "this is my first file using echo command" >> firstFileUsingEcho.txt
 $ cat firstFileUsingEcho.txt
@@ -70,4 +71,3 @@ $ git clean -xf       // clean including ignored files.
 --
 
 $ git clone https://github.com/....
-$ 
