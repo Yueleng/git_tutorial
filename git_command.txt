@@ -1,0 +1,73 @@
+$ git init
+$ echo "this is my first file using echo command" >> firstFileUsingEcho.txt
+$ cat firstFileUsingEcho.txt
+$ touch <fileName>  -- creates a file
+$ vi secondFileUsingVi.txt  => i => this is the second file using vi editor => esc:wq
+$ cat secondFileUsingVi.txt
+$ ls -al
+$ ls -l
+$ cp /C/Users/Yueleng/Downloads/initializr-verekia-4.0.zip . --copy to current path
+$ unzip initializr-verekia-4.0.zip -- this will create a folder called 'initializr-verekia-4.0.zip'
+$ rm initializr-verekia-4.0.zip  -- remove
+$ mv initializr/ myRepoFromExistingSource -- move or rename
+$ cd myRepoFromExistingSource/
+$ git init  -- convert the unversion to version
+--
+$ git clone https://github.com/Yueleng/Coursera-Algorithms
+
+--
+$ git status
+$ git add <filename>
+$ git status
+$ git rm --cached demoFile1
+$ git commit -m "out first commit for this course"
+--
+$ git status --long
+$ git status --s
+--
+$ git log
+$ git log --oneline
+$ git log '<filename>'
+$ git log sinceIdentifier..untilIdentifier --oneline  // sinceIdentifier not included
+$ git log -n 2 --oneline // show the number of lines
+
+-- 
+
+$ git branch  -- show current branches.
+$ git branch <branchName> -- create new branch <branchName>. new branch inhereits the history from the master branch
+$ git checkout <branchName> -- switch to <branchName> branch. 
+$ git checkout <commit-id> -- checkout to that particular commit.
+$ git cp -rf initializr/* demo-checkout-commit/    -- r: recursively; f: fource
+$ git rm -rf initializr
+$ git commit -am "1st commit -robot.txt" // express commit
+$ git branch <new-branch-name> <commit-id>
+$ git checkout -b <commit-id>
+
+
+-- 
+
+$ git checkout <commit-id> <checkoutFileName>  -- different from checkout to a certain commit. Status will show that <xyz.txt> has been added to staging area.
+$ git checkout HEAD <checkoutFileName>         -- checkout the particular file back to head
+$ git revert HEAD                              -- revert HEAD to previous commit
+
+
+-- Reseting Git: the only commands that has the potential to lose information.
+
+$ git reset <fileName> -- removes the specified file from the staging are but leaves the working directory unchanged.
+$ git reset --hard  -- DANGEROUS!  reset everything back to last commit. Clear the change in working directory since last commit
+$ git reset <commit-id> -- Useful, when you want to rebuild the commit tree.
+$ git reset --hard <commit-id> -- DANGEROUS! reset everything back to <commit-id> and delete everything(working directory and commits) behind.
+
+-- git clean: Delete untracked files
+
+$ git clean -n        // dry run
+$ git clean -f        // run fource, clean untracked files, excluding folders.
+$ git clean -f <path> // clean untracked under the <path>
+$ git clean -df       // clean untracked directory and files both
+$ git clean -xf       // clean including ignored files. 
+
+
+--
+
+$ git clone https://github.com/....
+$ 
