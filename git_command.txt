@@ -71,3 +71,18 @@ $ git clean -xf       // clean including ignored files.
 --
 
 $ git clone https://github.com/....
+$ git push origin master -- "origin" refers to the remote repository and "master" refers to the master branch of your local repository
+$ git pull origin master -- "origin" refers to the remote repository and "master" refers to the master branch of remote repository
+$ git pull 
+
+-- GITHUB VIA SSH
+
+$ ls -l ~/.ssh   // '~/' represents root directory.
+$ rm -rf .ssh
+$ ssh-keygen -t rsa -b 4096 -C "comments here to distingish different generations" // 
+$ evel "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_rsa.pub
+$ ssh -T (-p 443) git@ssh.github.com // added '[ssh.github.com]:443,[192.30.253.122]:443' (RSA) to the list of known hosts.
+$ git remote -v // list of existing remote repository, -v: verbal
+$ git remote set-url origin git@github.com:yueleng/git_tutorial.git // switch to ssh protocal connections.
+$ 
