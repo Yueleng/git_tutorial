@@ -85,4 +85,45 @@ $ ssh-add ~/.ssh/id_rsa.pub
 $ ssh -T (-p 443) git@ssh.github.com // added '[ssh.github.com]:443,[192.30.253.122]:443' (RSA) to the list of known hosts.
 $ git remote -v // list of existing remote repository, -v: verbal
 $ git remote set-url origin git@github.com:yueleng/git_tutorial.git // switch to ssh protocal connections.
-$ 
+$ git remote set-url origin https://github.com/Yueleng/git_tutorial.git // switch back to https protocal
+$ ssh-keygen -p // set passphrase
+
+
+-- Default editor Windows --
+$ git config --global --edit
+$ git config --global core.editor "'c:/program files/sublime text 3/subl.exe' -w"
+
+
+-- Default editor Linux --
+$ cd ~ // goto root fodler.
+$ wget http://c758482.r82.cf2.rackcdn.com/Sublime Text 2.0.1 x64.tar.bz2            // get the file
+$ tar vxjf Sublime\ Text\ 2.0.1\ x64.tar.bz2                                        // exact
+$ ls 
+$ ls <folder_name>
+$ ls <path>
+$ sudo sublime_text_3 /opt/                                                         // move to /opt/ folder
+$ vi subl
+--
+#! /bin/sh                                                                          // sh: shebang
+exec /opt/sublime_text_3/sublime_text "#@"                                          // POSIX: The Portable Operating System Interface
+--
+$ ls -l
+$ sudo chmod 755 subl                                                               // 755 means only you can write, others can only read and execute
+$ sudo mv subl /usr/bin                                                             // /usr/bin is a primary directory of executable commands on the linux system
+$ subl                                                                              // Execute sublime text
+$ git config --global core.editor "subl -w"                                         // -w means it will goback to bash after the tab of editor closes.
+$ git config --global --list
+$ git commit                                                                        // invoke default editor
+
+
+-- Git diff and merge tools -- 
+$ git diff
+$ git config --global diff.tool p4merge
+$ git config --global difftool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+$ git config --global difftool.prompt false
+
+$ git config --global merge.tool p4merge
+$ git config --global mergetool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+$ git config --global mergetool.prompt false
+
+
